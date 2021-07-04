@@ -1,0 +1,238 @@
+/* Add or modify CSS for your web app */
+
+* {
+    box-sizing: border-box; 
+  
+    
+    
+    
+    /* use traditional box model sizing */
+  }
+
+ 
+  @keyframes gradient {
+    
+    
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 0% 150%;
+    }
+    10% {
+        background-position: 0% 30%;
+    }
+    10% {
+        background-position: 0% 30%;
+    }
+    19% {
+        background-position: 0% 80%;
+    }
+}
+  body {
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  /* #notification  */
+  #notification {
+    display: none; /* hide until needed */
+    position: fixed; /* fix to viewport */
+    top: 0; /* place at top of viewport */
+    left: 50%;
+    transform: translate(-50%, 10px);
+    max-width: 300px;
+    width: calc(100vw - 20px);
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    text-align: left;
+  }
+  
+  /* close button for notification */
+  .closebtn {
+    margin: -15px -15px 10px 10px;
+    padding: 10px;
+    color: #e75f5f;
+    font-weight: bold;
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* hover effect for close button */
+  .closebtn:hover {
+    color: #000000;
+  }
+  
+  /* .screen class applies to all screens */
+  .screen {
+    max-width: displayWidth; /* mimic largest phone width */
+    width: 100vw; /* width of viewport */
+    height: calc(100vh - 4.5em); /* height of viewport minus height of #navigation menu */
+    margin: 0 auto;
+    padding: 20px 10px;
+    overflow: auto;
+    border: 1px solid #888888;
+    /* can add other CSS for all screens, such as background-color, etc. */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,rgb(187, 233, 102),orange);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  /* show #screen1 when app first starts */
+  #screen1 {
+      display: block;
+  }
+  
+  /* hide other screens when app first starts */
+  #screen2, #screen3, #screen4 {
+      display: none;
+  }
+  
+  /* can add custom CSS for each specific screen */
+  #screen1 {
+  background-color: #48ff00;
+ 
+  }
+  
+  #screen2 {
+    background-color: #48ff00;
+  }
+  
+  #screen3 {
+    background-color: #48ff00;
+  }
+  
+  #screen4 {
+    background-color: #48ff00;
+  }
+ h1{
+      flex-wrap: wrap;
+      background-color: #ffdb0c;
+      padding:10px;
+      border: 10px solid #000000f6;
+      border-radius: 30px;
+      text-align: center;
+      font-size: initial;
+      font-size: 20px;
+ color:rgb(0, 67, 253)
+  }
+  div {
+   
+  }
+  h2{
+  
+    flex-wrap: wrap;
+    
+    padding:10px; 
+    border-radius: 30px;
+    text-align: inherit;
+    font-size: initial;
+    font-size: 20px;
+color:rgb(91, 129, 235)
+
+}
+.b{
+color:black;
+font-weight: 600;
+}
+
+img{
+
+  display: flex;
+justify-self: center;
+
+justify-content: center;
+    border-radius: 20px;
+    border:3px solid lightcoral;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p{
+  
+}
+  .q{ 
+    box-shadow: 10px 30px;
+    background-color: #8ed1fd;
+    padding:10px;
+    border: 5px solid #0313ff;
+    border-radius: 30px;
+    justify-content: left;
+    text-align: left;
+    align-items: flex-start;
+    align-self:auto;
+    font-size: initial;
+    font-size: 20px;
+color:rgb(72, 84, 247);
+
+
+}
+  /* #navigation menu fixed to bottom of viewport */
+  #navigation {
+    position: fixed; /* fix to viewport */
+    bottom: 0; /* place at bottom of viewport */
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 480px; /* mimic largest phone width */
+    width: 100vw; /* width of viewport */
+    height: 4.5em;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #c00000;
+  }
+  
+  /* nav menu options */
+  nav > a {
+      display: inline-block;
+      /* for max-width and width, divide by number of screens */
+      max-width: calc((480px / 4) - 4px);
+      width: calc((100vw / 4) - 4px);
+      margin: 0;
+      padding: 0.5em 0;
+      text-align: center;
+      background-color: #ffffff;
+      color: #95e473;
+      transition: 0.3s;
+  }
+  
+  /* hover effect for nav menu options */
+  nav > a:hover {
+      background-color: #eeeeee;
+  }
+  
+  /* .active class indicates current screen within nav menu */
+  nav > a.active {
+      background-color: #ffffff;
+      color: #0099ff;
+  }
+  
+  /* nav menu icon label */
+  nav > a > p {
+      font-size: 0.75em;
+      margin: 0.5em 0 0;
+  }
+  
+  /* can add CSS for other elements, classes, or IDs */
+  
